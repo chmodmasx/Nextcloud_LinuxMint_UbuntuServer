@@ -1,14 +1,12 @@
 #!/bin/bash
 
-# Me falta hacer que no omita la pagina de apps recomendadas al loguearme por primera vez https://mintlatam.com/index.php/core/apps/recommended
-
-echo "   ____  _____                     _       ____              _           "
-echo "  / __ \| ____|___ _ __   __ _  __| | __ _|  _ \ _   _ _ __ (_) ___ __ _ "
-echo " / / _\` |  _| / __| '_ \ / _\` |/ _\` |/ _\` | |_) | | | | '_ \| |/ __/ _\` |"
-echo "| | (_| | |___\__ \ |_) | (_| | (_| | (_| |  _ <| |_| | | | | | (_| (_| |"
-echo " \ \__,_|_____|___/ .__/ \__,_|\__,_|\__,_|_| \_\__,__|_| |_|_|\___\__,_|"
-echo "  \____/          |_|                                                    "
-
+echo "   ____       _                         _                          ";
+echo "  / __ \  ___| |__  _ __ ___   ___   __| |_ __ ___   __ _ _____  __";
+echo " / / _\` |/ __| '_ \| '_ \` _ \ / _ \ / _\` | '_ \` _ \ / _\` / __\ \/ /";
+echo "| | (_| | (__| | | | | | | | | (_) | (_| | | | | | | (_| \__ \>  < ";
+echo " \ \__,_|\___|_| |_|_| |_| |_|\___/ \__,_|_| |_| |_|\__,_|___/_/\_\ ";
+echo "  \____/                                                           ";
+echo "En Dios confiamos | In God we trust"
 echo "\n"
 
 # Ingresa tu dominio
@@ -205,14 +203,15 @@ sudo systemctl restart php${PHP_VERSION}-fpm.service
 
 echo '\n'
 
-echo "   ____  _____                     _       ____              _           "
-echo "  / __ \| ____|___ _ __   __ _  __| | __ _|  _ \ _   _ _ __ (_) ___ __ _ "
-echo " / / _\` |  _| / __| '_ \ / _\` |/ _\` |/ _\` | |_) | | | | '_ \| |/ __/ _\` |"
-echo "| | (_| | |___\__ \ |_) | (_| | (_| | (_| |  _ <| |_| | | | | | (_| (_| |"
-echo " \ \__,_|_____|___/ .__/ \__,_|\__,_|\__,_|_| \_\__,__|_| |_|_|\___\__,_|"
-echo "  \____/          |_|                                                    "
-
+echo "   ____       _                         _                          ";
+echo "  / __ \  ___| |__  _ __ ___   ___   __| |_ __ ___   __ _ _____  __";
+echo " / / _\` |/ __| '_ \| '_ \` _ \ / _ \ / _\` | '_ \` _ \ / _\` / __\ \/ /";
+echo "| | (_| | (__| | | | | | | | | (_) | (_| | | | | | | (_| \__ \>  < ";
+echo " \ \__,_|\___|_| |_|_| |_| |_|\___/ \__,_|_| |_| |_|\__,_|___/_/\_\ ";
+echo "  \____/                                                           ";
+echo "En Dios confiamos | In God we trust"
 echo "\n"
+
 # Muestra los datos de la configuración
 echo "\e[4mDatos de la base de datos Nextcloud:\e[0m"
 echo "URL: $domain"
@@ -225,4 +224,4 @@ echo "\e[4mDatos del usuario Nextcloud:\e[0m"
 echo "Usuario de administrador de Nextcloud: ${NC_ADMIN_USER}"
 echo "Contraseña de administrador de Nextcloud: ${NC_ADMIN_PASS}"
 echo '\n'
-echo "Ingrese a https://$domain"
+echo "Ingrese a https://$domain/core/apps/recommended"
