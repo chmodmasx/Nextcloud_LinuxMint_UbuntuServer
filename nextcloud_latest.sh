@@ -26,17 +26,16 @@ echo '\n'
 
 #Instala los paquetes necesarios
 apt-get update
-apt-get -y install apache2 mariadb-server libapache2-mod-fcgid php-fpm php-gd php-mysql php-curl php-gmp php-mbstring php-intl php-imagick php-xml php-zip unzip memcached php-memcached redis-server php-redis php-bcmath php-bz2 php-imap php-smbclient php-ldap imagemagick ffmpeg
+apt-get -y install apache2 mariadb-server libapache2-mod-fcgid curl zip unzip php-fpm php-gd php-mysql php-curl php-gmp php-mbstring php-intl php-imagick php-xml php-zip unzip memcached php-memcached redis-server php-redis php-bcmath php-bz2 php-imap php-smbclient php-ldap imagemagick ffmpeg
 
 # Descarga y descomprime el archivo zip y mueve la carpeta a /var/www/html/nextcloud
-wget https://download.nextcloud.com/server/releases/latest.zip
-sudo unzip latest.zip -d /var/www/html/
+wget https://download.nextcloud.com/server/releases/latest-27.zip
+sudo unzip latest-27.zip -d /var/www/html/
 
 #Obtiene la versión de PHP instalada
 PHP_VERSION=$(php -v | head -n 1 | cut -d " " -f 2 | cut -c 1,2,3)
 
 #Configura Apache
-a2enmod rewrite
 a2enmod headers
 a2enmod env
 a2enmod dir
@@ -75,7 +74,8 @@ sudo echo "<VirtualHost *:80>
 
 
 # Habilitamos el archivo de configuración
-sudo a2ensite nextcloud.conf
+a2ensite nextcloud.conf
+a2enmod rewrite
 
 # Configura la base de datos MariaDB
 
@@ -106,6 +106,22 @@ cat <<EOF | sudo tee /var/www/html/nextcloud/config/autoconfig.php
   'overwriteprotocol' => 'https',
   'overwrite.cli.url' => 'https://$domain',
   'overwritehost' => '$domain',
+  'enable_previews' => true,
+  'enabledPreviewProviders' =>
+  array (
+    'OC\Preview\Movie',
+    'OC\Preview\PNG',
+    'OC\Preview\JPEG',
+    'OC\Preview\GIF',
+    'OC\Preview\BMP',
+    'OC\Preview\XBitmap',
+    'OC\Preview\MP3',
+    'OC\Preview\MP4',
+    'OC\Preview\TXT',
+    'OC\Preview\MarkDown',
+    'OC\Preview\PDF'
+  ),
+
 );
 EOF
 
@@ -115,7 +131,7 @@ chown www-data:www-data /var/nextcloud_data
 chmod 755 /var/nextcloud_data
 
 # Limpia los archivos innecesarios
-rm latest.zip
+rm latest-27.zip
 
 # Damos permisos a la carpeta HTML para el usuario www-data
 sudo chown -R www-data:www-data /var/www/html/nextcloud/
