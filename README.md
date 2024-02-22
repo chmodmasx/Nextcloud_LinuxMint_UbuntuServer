@@ -7,6 +7,8 @@ Simplemente ejecute sudo **sh nextcloud_latest.sh** este script instala la versi
 - *la base de datos ya viene configurada, no tiene que hacer más*
 - *los datos del usuario y base de datos se entregan al finalizar el script en la terminal*
 - *memcache y redis serán las cache por defecto en este script, no opte por APCu porque no conozco su hardware, puede optar por cambiarlo de todos modos.*
+- Ubicación de instalación: /var/www/html/nextcloud/
+- Ubicación de los datos de usuario: /var/nextcloud_data/
 
 ![image](https://github.com/chmodmasx/Nextcloud_LinuxMint_UbuntuServer/assets/44514442/0af5740a-0fe5-4593-8d6f-64a888723cd5)
 
