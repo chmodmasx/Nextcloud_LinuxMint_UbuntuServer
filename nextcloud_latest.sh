@@ -109,17 +109,21 @@ cat <<EOF | sudo tee /var/www/html/nextcloud/config/autoconfig.php
   'enable_previews' => true,
   'enabledPreviewProviders' =>
   array (
-    'OC\Preview\Movie',
-    'OC\Preview\PNG',
-    'OC\Preview\JPEG',
-    'OC\Preview\GIF',
-    'OC\Preview\BMP',
-    'OC\Preview\XBitmap',
-    'OC\Preview\MP3',
-    'OC\Preview\MP4',
-    'OC\Preview\TXT',
-    'OC\Preview\MarkDown',
-    'OC\Preview\PDF'
+    0 => 'OC\\Preview\\Movie',
+    1 => 'OC\\Preview\\PNG',
+    2 => 'OC\\Preview\\JPEG',
+    3 => 'OC\\Preview\\GIF',
+    4 => 'OC\\Preview\\BMP',
+    5 => 'OC\\Preview\\XBitmap',
+    6 => 'OC\\Preview\\MP3',
+    7 => 'OC\\Preview\\MP4',
+    8 => 'OC\\Preview\\TXT',
+    9 => 'OC\\Preview\\MarkDown',
+    10 => 'OC\\Preview\\PDF',
+    11 => 'OC\\Preview\\HEIC',
+    12 => 'OC\\Preview\\HEIF',
+    13 => 'OC\\Preview\\TIFF',
+    14 => 'OC\\Preview\\WEBP',
   ),
 
 );
