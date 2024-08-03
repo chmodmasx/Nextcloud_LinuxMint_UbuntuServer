@@ -4,7 +4,7 @@ Funciona en Linux Mint 21.X y Ubuntu 22.04.X (puede ser la version server o la n
 
 Simplemente copie y pegue esta linea en su terminal
 ```
-curl -s https://raw.githubusercontent.com/chmodmasx/Nextcloud_LinuxMint_UbuntuServer/main/nextcloud_latest.sh >tmp.sh && sh tmp.sh
+curl -s https://raw.githubusercontent.com/chmodmasx/Nextcloud_LinuxMint_UbuntuServer/main/nextcloud_latest.sh >tmp.sh && sudo sh tmp.sh
 ```
 
 este script instala la versión 28 de Nextcloud desde la página oficial.
