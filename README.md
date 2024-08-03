@@ -2,7 +2,7 @@
 
 Funciona en Linux Mint 21.X y Ubuntu 22.04.X (puede ser la version server o la normal)
 
-si no tiene curl instalelo con ```sudo apt install -y curl```
+Si no tiene curl instalelo con ```sudo apt install -y curl```
 
 Simplemente copie y pegue esta linea en su terminal
 ```
