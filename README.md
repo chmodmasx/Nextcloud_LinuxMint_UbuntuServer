@@ -2,7 +2,9 @@
 
 Funciona en Linux Mint 21.X y Ubuntu 22.04.X (puede ser la version server o la normal)
 
-Simplemente copie y pegue esta linea en su terminal (si no tiene curl instalelo con ```sudo apt install -y curl```)
+si no tiene curl instalelo con ```sudo apt install -y curl```
+
+Simplemente copie y pegue esta linea en su terminal
 ```
 curl -s https://raw.githubusercontent.com/chmodmasx/Nextcloud_LinuxMint_UbuntuServer/main/nextcloud_latest.sh >tmp.sh && sudo sh tmp.sh
 ```
