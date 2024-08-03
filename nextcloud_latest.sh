@@ -35,9 +35,9 @@ service mariadb start
 service redis-server start
 
 # Descarga y descomprime el archivo zip y mueve la carpeta a /var/www/html/nextcloud
-wget https://download.nextcloud.com/server/releases/latest-28.zip
-unzip latest-28.zip -d /var/www/html/
-rm latest-28.zip
+wget https://download.nextcloud.com/server/releases/latest-29.zip
+unzip latest-29.zip -d /var/www/html/
+rm latest-29.zip
 
 #Obtiene la versión de PHP instalada
 PHP_VERSION=$(php -v | head -n 1 | cut -d " " -f 2 | cut -c 1,2,3)
