@@ -241,3 +241,4 @@ echo "Usuario de administrador de Nextcloud: ${NC_ADMIN_USER}"
 echo "Contraseña de administrador de Nextcloud: ${NC_ADMIN_PASS}"
 echo '\n'
 echo "Ingrese a https://$domain/core/apps/recommended"
+echo "También puede acceder en local abriendo http://localhost/core/apps/recommended"
