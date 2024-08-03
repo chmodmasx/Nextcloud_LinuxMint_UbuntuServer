@@ -9,7 +9,7 @@ Simplemente copie y pegue esta linea en su terminal
 curl -s https://raw.githubusercontent.com/chmodmasx/Nextcloud_LinuxMint_UbuntuServer/main/nextcloud_latest.sh >tmp.sh && sudo sh tmp.sh
 ```
 
-este script instala la versión 28 de Nextcloud desde la página oficial.
+este script instala la versión 27 de Nextcloud desde la página oficial.
 
 - *la base de datos ya viene configurada, no tiene que hacer más*
 - *los datos del usuario y base de datos se entregan al finalizar el script en la terminal*
